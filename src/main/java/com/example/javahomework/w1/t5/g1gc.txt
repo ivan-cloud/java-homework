@@ -1,3 +1,5 @@
+# java -jar -XX:+UseG1GC -XX:MaxGCPauseMillis=50 -Xmx1024m -Xms1024m java-homework-0.0.1-SNAPSHOT.jar
+
 # jmap -heap 35170
 Attaching to process ID 35170, please wait...
 Debugger attached successfully.
