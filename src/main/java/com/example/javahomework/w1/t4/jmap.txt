@@ -27,4 +27,5 @@ Garbage-First (G1) GC with 2 thread(s)
   12:          7434         297360  java.util.LinkedHashMap$Entry
 
 
-# jmap -dump:format=b,file=javahomework.dump 106416
+# jmap -dump:format=b,file=javahomework.hprof 106416
+# JMC 打开 javahomework.hprof
