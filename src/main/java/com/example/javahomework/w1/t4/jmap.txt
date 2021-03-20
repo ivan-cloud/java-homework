@@ -1,0 +1,30 @@
+# jmap -heap 35170
+Attaching to process ID 35170, please wait...
+Debugger attached successfully.
+Server compiler detected.
+JVM version is 25.231-b11
+
+using thread-local object allocation.
+Garbage-First (G1) GC with 2 thread(s)
+
+
+
+# jmap -histo 106416
+
+ num     #instances         #bytes  class name
+----------------------------------------------
+   1:         83330       13155080  [C
+   2:          6691        5001488  [I
+   3:         10853        4347976  [B
+   4:         62284        1494816  java.lang.String
+   5:         12657         791768  [Ljava.lang.Object;
+   6:          8813         775544  java.lang.reflect.Method
+   7:          5928         655024  java.lang.Class
+   8:         18665         597280  java.util.concurrent.ConcurrentHashMap$Node
+   9:         21162         442728  [Ljava.lang.Class;
+  10:          6330         405120  java.net.URL
+  11:          3546         301744  [Ljava.util.HashMap$Node;
+  12:          7434         297360  java.util.LinkedHashMap$Entry
+
+
+# jmap -dump:format=b,file=javahomework.dump 106416
