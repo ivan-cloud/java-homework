@@ -1,0 +1,4 @@
+java -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:gc.serail.log -Xmx1g -Xms1g -XX:+UseSerialGC GCLogAnalysis
+java -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:gc.parallel.log -Xmx1g -Xms1g -XX:+UseParallelGC GCLogAnalysis
+java -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:gc.cms.log -Xmx1g -Xms1g -XX:+UseConcMarkSweepGC GCLogAnalysis
+java -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:gc.g1.log -Xmx1g -Xms1g -XX:+UseG1GC GCLogAnalysis

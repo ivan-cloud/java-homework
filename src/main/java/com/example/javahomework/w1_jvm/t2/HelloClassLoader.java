@@ -1,4 +1,4 @@
-package com.example.javahomework.w1.t2;
+package com.example.javahomework.w1_jvm.t2;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
