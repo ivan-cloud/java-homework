@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+    <bean id="httpInboundServer" class="com.example.javahomework.w5_fx.t4_1.inbound.HttpInboundServer">
+
+        <constructor-arg index="0" value="${proxyPort:8888}"/>
+        <constructor-arg index="1">
+            <list>
+                <value>http://localhost:8808</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean class="com.example.javahomework.w5_fx.t4_1.inbound.HttpInboundInitializer">
+        <constructor-arg>
+            <list>
+                <value>http://localhost:8808</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>

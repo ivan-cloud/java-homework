@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+    <bean id="student1" class="com.example.javahomework.w5_fx.t3.Student">
+        <property name="id" value="11"/>
+        <property name="name" value="张三"/>
+    </bean>
+    <bean id="student2" class="com.example.javahomework.w5_fx.t3.Student">
+        <property name="id" value="12"/>
+        <property name="name" value="李四"/>
+    </bean>
+
+    <bean id="klass" class="com.example.javahomework.w5_fx.t3.Klass">
+        <property name="students">
+            <list>
+                <ref bean="student1"/>
+                <ref bean="student2"/>
+                <bean class="com.example.javahomework.w5_fx.t3.Student">
+                    <property name="id" value="13"/>
+                    <property name="name" value="王五"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+
+</beans>
