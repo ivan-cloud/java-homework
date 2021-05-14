@@ -1,0 +1,38 @@
+spring:
+  shardingsphere:
+    # 数据源相关配置
+    datasource:
+      # 数据源名称
+      names: master1, slave1
+      # MySQL master数据源
+      master1:
+        # 数据库连接池
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://172.16.0.157:3307/order?serverTimezone=UTC
+        username: root
+        password: yhkj@2020
+      # slave数据源
+      slave1:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://172.16.0.157:3308/order?serverTimezone=UTC
+        username: slave
+        password: slavepass
+    props:
+      # 开启SQL显示
+      sql.show: true
+    sharding:
+      master-slave-rules:
+        master1:
+          master-data-source-name: master1
+          slave-data-source-names: slave1
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-prefix: dao
+
+
+server.port: 9876

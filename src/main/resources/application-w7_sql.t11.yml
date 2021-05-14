@@ -1,0 +1,19 @@
+spring:
+  shardingsphere:
+    props:
+      # 开启SQL显示
+      sql.show: true
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3307/replica_query_db
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: yhkj@2020
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-prefix: dao
+
+
+server.port: 9876

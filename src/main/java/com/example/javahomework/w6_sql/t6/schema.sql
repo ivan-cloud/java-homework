@@ -1,3 +1,6 @@
+CREATE DATABASE `order`;
+
+USE `order`;
 /*
  Navicat MySQL Data Transfer
 
